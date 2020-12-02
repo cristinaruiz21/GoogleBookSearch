@@ -10,7 +10,7 @@ function Books() {
 
   // Load all books and store them with setBooks
   useEffect(() => {
-    API.googleBooks()
+    API.getBooks()
     .then(res =>{
       // console.log(res.data)
       setBooks(res.data)
@@ -28,12 +28,13 @@ function Books() {
             {books.length ? (
               <div style={{ display: "flex", flexWrap: "wrap" }}>
                 {books.map(book => (
-                    <Card key={book.id} type="save"
-                    title={book.volumeInfo.title}
-                    authors={book.volumeInfo.authors}
-                    description={book.volumeInfo.description}
-                    image={book.volumeInfo.imageLinks?.thumbnail}
-                    link={book.volumeInfo.canonicalVolumeLink}
+                    <Card key={book._id} type="delete"
+                    id={book._id}
+                    title={book.title}
+                    authors={book.authors}
+                    description={book.description}
+                    image={book.image}
+                    link={book.link}
                     >
                     </Card>
                   ))}

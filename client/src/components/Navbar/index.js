@@ -25,7 +25,7 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <Link
-              to="/discover"
+              to="/savedbooks"
               className={window.location.pathname === "/savedbooks" ? "nav-link active" : "nav-link"}
             >
               Your Library
