@@ -1,15 +1,17 @@
 import React from "react";
 import Search from "./pages/Search";
 import Save from "./pages/Save";
-import Nav from "./components/Nav";
+import Nav from "./components/Navbar";
+import {Route, BrowserRouter as Router} from "react-router-dom";
 
 function App() {
   return (
-    <div>
+    <Router>
       <Nav />
-      <Search />
-      <Save />
-    </div>
+      <Route exact path="/" component={Search} />
+      <Route exact path="/books" component={Search}/>
+      <Route exact path="/savedBooks" component={Save}/>
+    </Router>
   );
 }
 
