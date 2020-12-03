@@ -4,18 +4,13 @@ import { Col, Row, Container } from "../components/Grid";
 import Card from "../components/Card";
 
 
-function Books() {
-  // Setting our component's initial state
-  const [books, setBooks] = useState([])
+function Books(props) {
+  const [books, setBook] = useState({})
 
-  // Load all books and store them with setBooks
   useEffect(() => {
     API.getBooks()
-    .then(res =>{
-      // console.log(res.data)
-      setBooks(res.data)
-    })
-    .catch(err => console.log(err));
+      .then(res => setBook(res.data))
+      .catch(err => console.log(err));
   }, [])
 
 

@@ -15,6 +15,13 @@ const bookSeed = [
     description:"Provides a comprehensive guide to planning a wedding, including contract negotiations, creating a budget, planning guest lists, and obtaining a marriage license.",
     image: "http://books.google.com/books/content?id=a_eBKmUbW6wC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
     link:"http://books.google.com/books?id=a_eBKmUbW6wC&dq=The+Wedding&hl=&source=gbs_api"
+  },
+  {
+    title:"The Wedding Book",
+    authors: ["Mindy Weiss", "Lisbeth Levine"],
+    description:"Provides a comprehensive guide to planning a wedding, including contract negotiations, creating a budget, planning guest lists, and obtaining a marriage license.",
+    image: "http://books.google.com/books/content?id=a_eBKmUbW6wC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    link:"http://books.google.com/books?id=a_eBKmUbW6wC&dq=The+Wedding&hl=&source=gbs_api"
   }
 ];
 

@@ -7,10 +7,12 @@ import {Route, BrowserRouter as Router} from "react-router-dom";
 function App() {
   return (
     <Router>
-      <Nav />
-      <Route exact path="/" component={Search} />
-      <Route exact path="/books" component={Search}/>
-      <Route exact path="/savedBooks" component={Save}/>
+      <div>
+        <Nav />
+        <Route exact path="/" component={Search} />
+        <Route exact path="/books" component={Search}/>
+        <Route exact path="/savedbooks" component={Save}/>
+      </div>
     </Router>
   );
 }

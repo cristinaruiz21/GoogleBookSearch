@@ -1,29 +1,62 @@
 import React from "react";
 // import "./style.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import SaveBtn from "../SaveBtn";
-import DeleteBtn from "../DeleteBtn";
+import {Button} from "../Button";
+import API from "../../utils/API";
 
-function Card(props){
-    return(
-        <div className="card">
-            <div className="image">
-                <img src={props.image} alt={props.name}>
-                </img>
-            </div>
-            <div className="content">
-                <h4>{props.title}</h4>
-                <h5>{props.authors}</h5>
-                <a rel="noreferrer noopener" target="_blank" href={props.link}></a>
-                    {props.type ==="save" ?
-                    (
-                    <SaveBtn />
-                    ):(
-                    <DeleteBtn />
-                    )}
-            </div>
-        </div>
-    )
+
+
+
+
+function Card(props) {
+  function bookSave() {
+    API.saveBook({
+      title: props.title,
+      authors: props.authors,
+      description: props.description,
+      image:props.image,
+      link:props.link,
+  
+    })
+      .then(res => console.log("Your book has been saved!"))
+      .catch(err => console.log(err));
+  
+  }
+
+  function bookDelete() {
+    API.deleteBook(props.id)
+      .then(res => console.log("Your book has been deleted"))
+      .catch(err => console.log(err));
+  
+  }
+
+  return (
+    <div className="card">
+      <div className="img-container">
+        <img alt={props.title} src={props.image} />
+      </div>
+       <div className="content">
+        
+      
+          
+            <a rel="noreferrer noopener" target="_blank" href={props.link}>
+              
+              <button className="btn btn-secondary" style={{margingRight: 10}}>Info</button>
+
+            
+            </a>
+
+        {props.type ==="save" ?
+        (
+          <Button className ="btn btn-secondary" onClick={bookSave}>Save</Button>
+        ):(
+          <Button className ="btn btn-secondary" onClick={bookDelete}>Delete</Button>
+
+        )}
+      
+      </div>
+      
+    </div>
+  );
 }
 
 export default Card;
