@@ -1,5 +1,4 @@
 import React from "react";
-// import "./style.css";
 import {Button} from "../Button";
 import API from "../../utils/API";
 
@@ -12,7 +11,7 @@ function Card(props) {
       description: props.description,
       image:props.image,
       link:props.link,
-  
+      
     })
       .then(res => console.log("Your book has been saved!"))
       .catch(err => console.log(err));
