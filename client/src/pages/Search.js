@@ -33,7 +33,7 @@ function Search() {
       <div>
       <Container fluid>
         <Row>
-          <Col size="md-6">
+          <Col size="md-12">
             <Jumbotron>
               <h1>What Books Should I Read?</h1>
             </Jumbotron>
@@ -55,7 +55,7 @@ function Search() {
       </Container>
       <Container>
         <Row>
-          <Col size="md-6 sm-12">
+          <Col size="md-12">
             <h1>Search Results</h1>
             {books.length ? (
               <div style={{ display: "flex", flexWrap: "wrap" }}>
