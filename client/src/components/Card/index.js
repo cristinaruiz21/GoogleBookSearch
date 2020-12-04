@@ -4,9 +4,6 @@ import {Button} from "../Button";
 import API from "../../utils/API";
 
 
-
-
-
 function Card(props) {
   function bookSave() {
     API.saveBook({
