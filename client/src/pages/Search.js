@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
-import { List, ListItem } from "../components/List";
 import Card from "../components/Card";
 import { Input, FormBtn } from "../components/Form";
 
